@@ -53,6 +53,7 @@
 			this.Controls.Add(this.pictureBox);
 			this.Name = "MainForm";
 			this.Text = "ImageView";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

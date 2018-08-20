@@ -16,5 +16,15 @@ namespace ImageView
 		{
 			InitializeComponent();
 		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			SetTitle(pictureBox.ImageLocation);
+		}
+
+		private void SetTitle(string url)
+		{
+			Text = "ImageView - " + url;
+		}
 	}
 }
