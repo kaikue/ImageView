@@ -30,10 +30,10 @@
 		{
 			this.pictureBox = new System.Windows.Forms.PictureBox();
 			this.panelInfo = new System.Windows.Forms.Panel();
-			this.labelSize = new System.Windows.Forms.Label();
-			this.labelIndex = new System.Windows.Forms.Label();
-			this.panelPicture = new System.Windows.Forms.Panel();
 			this.labelEdited = new System.Windows.Forms.Label();
+			this.labelIndex = new System.Windows.Forms.Label();
+			this.labelSize = new System.Windows.Forms.Label();
+			this.panelPicture = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.panelInfo.SuspendLayout();
 			this.panelPicture.SuspendLayout();
@@ -48,6 +48,7 @@
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
+			this.pictureBox.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.PictureBox_Load);
 			// 
 			// panelInfo
 			// 
@@ -61,15 +62,16 @@
 			this.panelInfo.Size = new System.Drawing.Size(842, 35);
 			this.panelInfo.TabIndex = 1;
 			// 
-			// labelSize
+			// labelEdited
 			// 
-			this.labelSize.AutoSize = true;
-			this.labelSize.Dock = System.Windows.Forms.DockStyle.Left;
-			this.labelSize.Location = new System.Drawing.Point(0, 0);
-			this.labelSize.Name = "labelSize";
-			this.labelSize.Size = new System.Drawing.Size(42, 20);
-			this.labelSize.TabIndex = 0;
-			this.labelSize.Text = "0 x 0";
+			this.labelEdited.AutoSize = true;
+			this.labelEdited.Dock = System.Windows.Forms.DockStyle.Right;
+			this.labelEdited.Location = new System.Drawing.Point(753, 0);
+			this.labelEdited.Name = "labelEdited";
+			this.labelEdited.Size = new System.Drawing.Size(89, 20);
+			this.labelEdited.TabIndex = 3;
+			this.labelEdited.Text = "01/01/2000";
+			this.labelEdited.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// labelIndex
 			// 
@@ -80,6 +82,16 @@
 			this.labelIndex.TabIndex = 1;
 			this.labelIndex.Text = "0 / 0";
 			this.labelIndex.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelSize
+			// 
+			this.labelSize.AutoSize = true;
+			this.labelSize.Dock = System.Windows.Forms.DockStyle.Left;
+			this.labelSize.Location = new System.Drawing.Point(0, 0);
+			this.labelSize.Name = "labelSize";
+			this.labelSize.Size = new System.Drawing.Size(42, 20);
+			this.labelSize.TabIndex = 0;
+			this.labelSize.Text = "0 x 0";
 			// 
 			// panelPicture
 			// 
@@ -92,17 +104,6 @@
 			this.panelPicture.Name = "panelPicture";
 			this.panelPicture.Size = new System.Drawing.Size(834, 427);
 			this.panelPicture.TabIndex = 2;
-			// 
-			// labelEdited
-			// 
-			this.labelEdited.AutoSize = true;
-			this.labelEdited.Dock = System.Windows.Forms.DockStyle.Right;
-			this.labelEdited.Location = new System.Drawing.Point(753, 0);
-			this.labelEdited.Name = "labelEdited";
-			this.labelEdited.Size = new System.Drawing.Size(89, 20);
-			this.labelEdited.TabIndex = 3;
-			this.labelEdited.Text = "01/01/2000";
-			this.labelEdited.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// MainForm
 			// 

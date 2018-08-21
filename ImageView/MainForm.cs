@@ -12,7 +12,8 @@ namespace ImageView
 {
 	public partial class MainForm : Form
 	{
-		private int zoomPercent = 100;
+		private int zoomLevel = 0;
+		private Image baseImage;
 
 		public MainForm()
 		{
@@ -21,14 +22,15 @@ namespace ImageView
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-			LoadPicture();
-		}
-
-		private void LoadPicture()
-		{
-			SetSize();
+			MinimumSize = new Size(230, 150);
 			SetTitle();
 			SetText();
+		}
+
+		private void PictureBox_Load(object sender, AsyncCompletedEventArgs e)
+		{
+			baseImage = pictureBox.Image;
+			SetSize();
 		}
 
 		private void SetSize()
@@ -37,8 +39,7 @@ namespace ImageView
 			//int marginY = pictureBox.Location.Y;
 			//Size minSize = new Size(pictureBox.Width + 2 * marginX, pictureBox.Height + 2 * marginY);
 			//Size maxSize = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-			MinimumSize = new Size(230, 150);
-
+			
 			int fullWidth = pictureBox.Size.Width;
 			int fullHeight = pictureBox.Size.Height;
 			int width = Math.Min(fullWidth, Screen.PrimaryScreen.Bounds.Width);
@@ -54,6 +55,7 @@ namespace ImageView
 
 		private void SetText()
 		{
+			int zoomPercent = GetZoomPercent();
 			labelSize.Text = pictureBox.Size.Width + " x " + pictureBox.Size.Height
 				+ " (" + zoomPercent + "%)";
 
@@ -70,6 +72,51 @@ namespace ImageView
 				Close();
 				return;
 			}
+
+			Console.WriteLine((int)e.KeyChar);
+
+			if (e.KeyChar == 45) //minus
+			{
+				ZoomOut();
+				return;
+			}
+
+			if (e.KeyChar == 61) //plus
+			{
+				ZoomIn();
+				return;
+			}
 		}
+
+		private void ZoomOut()
+		{
+			Zoom(-1);
+		}
+
+		private void ZoomIn()
+		{
+			Zoom(1);
+		}
+
+		private void Zoom(int addition)
+		{
+			zoomLevel += addition;
+
+			double zoom = GetZoomPercent() / 100.0;
+			int zoomWidth = Math.Max((int)(baseImage.Size.Width * zoom), 10);
+			int zoomHeight = Math.Max((int)(baseImage.Size.Height * zoom), 10);
+			Size zoomSize = new Size(zoomWidth, zoomHeight);
+			Image zoomImage = new Bitmap(baseImage, zoomSize);
+			pictureBox.Image = zoomImage;
+
+			SetSize();
+			SetText();
+		}
+		
+		private int GetZoomPercent()
+		{
+			return (int)(100 * Math.Pow(1.1, zoomLevel));
+		}
+		
 	}
 }
