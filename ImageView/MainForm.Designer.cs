@@ -64,7 +64,8 @@
 			// labelSize
 			// 
 			this.labelSize.AutoSize = true;
-			this.labelSize.Location = new System.Drawing.Point(4, 0);
+			this.labelSize.Dock = System.Windows.Forms.DockStyle.Left;
+			this.labelSize.Location = new System.Drawing.Point(0, 0);
 			this.labelSize.Name = "labelSize";
 			this.labelSize.Size = new System.Drawing.Size(42, 20);
 			this.labelSize.TabIndex = 0;
@@ -72,12 +73,10 @@
 			// 
 			// labelIndex
 			// 
-			this.labelIndex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.labelIndex.AutoSize = true;
-			this.labelIndex.Location = new System.Drawing.Point(360, 0);
+			this.labelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelIndex.Location = new System.Drawing.Point(42, 0);
 			this.labelIndex.Name = "labelIndex";
-			this.labelIndex.Size = new System.Drawing.Size(39, 20);
+			this.labelIndex.Size = new System.Drawing.Size(800, 35);
 			this.labelIndex.TabIndex = 1;
 			this.labelIndex.Text = "0 / 0";
 			this.labelIndex.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -98,11 +97,11 @@
 			// 
 			this.labelEdited.AutoSize = true;
 			this.labelEdited.Dock = System.Windows.Forms.DockStyle.Right;
-			this.labelEdited.Location = new System.Drawing.Point(687, 0);
+			this.labelEdited.Location = new System.Drawing.Point(753, 0);
 			this.labelEdited.Name = "labelEdited";
-			this.labelEdited.Size = new System.Drawing.Size(155, 20);
+			this.labelEdited.Size = new System.Drawing.Size(89, 20);
 			this.labelEdited.TabIndex = 3;
-			this.labelEdited.Text = "01/01/2000 12:00:00";
+			this.labelEdited.Text = "01/01/2000";
 			this.labelEdited.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// MainForm

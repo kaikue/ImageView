@@ -37,7 +37,7 @@ namespace ImageView
 			//int marginY = pictureBox.Location.Y;
 			//Size minSize = new Size(pictureBox.Width + 2 * marginX, pictureBox.Height + 2 * marginY);
 			//Size maxSize = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-			MinimumSize = new Size(100, 100);
+			MinimumSize = new Size(230, 150);
 
 			int fullWidth = pictureBox.Size.Width;
 			int fullHeight = pictureBox.Size.Height;
@@ -56,6 +56,7 @@ namespace ImageView
 		{
 			labelSize.Text = pictureBox.Size.Width + " x " + pictureBox.Size.Height
 				+ " (" + zoomPercent + "%)";
+
 			labelIndex.Text = "0 / 0";
 
 			DateTime lastModified = System.IO.File.GetLastWriteTime(pictureBox.ImageLocation);
