@@ -62,5 +62,14 @@ namespace ImageView
 			DateTime lastModified = System.IO.File.GetLastWriteTime(pictureBox.ImageLocation);
 			labelEdited.Text = lastModified.ToString("G");
 		}
+
+		public void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (int)Keys.Escape)
+			{
+				Close();
+				return;
+			}
+		}
 	}
 }

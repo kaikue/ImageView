@@ -114,6 +114,7 @@
 			this.Name = "MainForm";
 			this.Text = "ImageView";
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
 			this.panelInfo.ResumeLayout(false);
 			this.panelInfo.PerformLayout();
