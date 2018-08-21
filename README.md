@@ -1,5 +1,7 @@
-### TODO
+# ImageView
+Simple image viewing program
 
+## TODO
 - when loading, size window to min(screen size, image size)
 	- scale picture normally?
 - center picture box in panel (when panel is larger than picture)
