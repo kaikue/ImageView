@@ -41,10 +41,10 @@
 			// 
 			// pictureBox
 			// 
-			this.pictureBox.ImageLocation = "C:\\Users\\Kai\\Pictures\\cosmic brain.jpg";
+			this.pictureBox.ImageLocation = "";
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(600, 399);
+			this.pictureBox.Size = new System.Drawing.Size(500, 346);
 			this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.pictureBox.TabIndex = 0;
 			this.pictureBox.TabStop = false;
@@ -57,9 +57,9 @@
 			this.panelInfo.Controls.Add(this.labelEdited);
 			this.panelInfo.Controls.Add(this.labelIndex);
 			this.panelInfo.Controls.Add(this.labelSize);
-			this.panelInfo.Location = new System.Drawing.Point(0, 452);
+			this.panelInfo.Location = new System.Drawing.Point(0, 459);
 			this.panelInfo.Name = "panelInfo";
-			this.panelInfo.Size = new System.Drawing.Size(842, 35);
+			this.panelInfo.Size = new System.Drawing.Size(842, 28);
 			this.panelInfo.TabIndex = 1;
 			// 
 			// labelEdited
@@ -78,7 +78,7 @@
 			this.labelIndex.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelIndex.Location = new System.Drawing.Point(42, 0);
 			this.labelIndex.Name = "labelIndex";
-			this.labelIndex.Size = new System.Drawing.Size(800, 35);
+			this.labelIndex.Size = new System.Drawing.Size(800, 28);
 			this.labelIndex.TabIndex = 1;
 			this.labelIndex.Text = "0 / 0";
 			this.labelIndex.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -102,7 +102,7 @@
 			this.panelPicture.Controls.Add(this.pictureBox);
 			this.panelPicture.Location = new System.Drawing.Point(8, 8);
 			this.panelPicture.Name = "panelPicture";
-			this.panelPicture.Size = new System.Drawing.Size(834, 427);
+			this.panelPicture.Size = new System.Drawing.Size(834, 448);
 			this.panelPicture.TabIndex = 2;
 			// 
 			// MainForm

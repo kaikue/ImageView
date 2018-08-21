@@ -13,7 +13,7 @@
 	- explorer file order
 	- skip non-image files (only jpg, png, gif, bmp?)
 - open by clicking on image
-	- open with
+	- open with (test with built EXE)
 	- set as default program
 - gif support
 	- zoom

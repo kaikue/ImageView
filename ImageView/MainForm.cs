@@ -15,9 +15,16 @@ namespace ImageView
 		private int zoomLevel = 0;
 		private Image baseImage;
 
-		public MainForm()
+		public MainForm(string arg)
 		{
 			InitializeComponent();
+			SetImageURL(arg);
+		}
+
+		private void SetImageURL(string url)
+		{
+			pictureBox.ImageLocation = url;
+			pictureBox.Image = Image.FromFile(url);
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
